@@ -103,7 +103,7 @@ class _WebcamPageState extends State<FlutterWebQrcodeScanner> {
   void _cameraControllerListener() async {
     if (_controller.isRecording) {
       _startVideoStream();
-      setState(() {});
+      // setState(() {}); -- 이 코드로 인해 오류 발생!!
     } else {
       // print('stop video stream ');
       _stopVideoStream();
@@ -172,7 +172,7 @@ class _WebcamPageState extends State<FlutterWebQrcodeScanner> {
       }
       _stopDecoding = true;
 
-      setState(() {});
+      // setState(() {}); -- 이 코드로 인해 오류 발생!!
     }
   }
 
